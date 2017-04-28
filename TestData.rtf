@@ -1,0 +1,75 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf820
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww25400\viewh16000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Flights\
+\
+insert into flight values (1, to_date('27/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'), 'LON', 'LAX', 200, 45.00);\
+insert into flight values (2, to_date('28/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'), 'LON', 'LAX', 200, 45.00);\
+insert into flight values (3, to_date('29/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'), 'AMS', 'SKE', 180, 50.00);\
+insert into flight values (4, to_date('27/06/17 12:00:00', 'dd/mm/yy HH24:MI:SS'), 'GAT', 'LUT', 200, 25.00);\
+insert into flight values (5, to_date('27/09/17 12:00:00', 'dd/mm/yy HH24:MI:SS'), 'EMA', 'SKE', 400, 45.00);\
+insert into flight values (6,to_date('27/07/17 12:00:00', 'dd/mm/yy HH24:MI:SS'), 'LUT', 'LAX', 200, 30.00);\
+insert into flight values (7,to_date('27/10/17 12:00:00', 'dd/mm/yy HH24:MI:SS'), 'SKE', 'LAX', 50, 45.00);\
+insert into flight values (8,to_date('27/04/18 12:00:00', 'dd/mm/yy HH24:MI:SS'), 'HKO', 'LAX', 200, 70.00);\
+insert into flight values (9,to_date('27/05/17 12:00:00', 'dd/mm/yy HH24:MI:SS'), 'LON', 'MON', 100, 45.00);\
+insert into flight values (10,to_date('22/07/17 12:00:00', 'dd/mm/yy HH24:MI:SS'), 'LON', 'NZL', 200, 500.00);\
+\
+LeadCustomers\
+\
+insert into LeadCustomer values (1, 'John','Malvo', '12 rosedale whitwick le675gh', '@email');\
+insert into LeadCustomer values (2, 'Pete','Malvo', '13 rosedale whitwick le675gh', '@email');\
+insert into LeadCustomer values (3, 'Erik','Smith', '14 rosedale whitwick le675gh', '@email');\
+insert into LeadCustomer values (4, 'John','Malvo', '15 rosedale whitwick le675gh', '@email');\
+insert into LeadCustomer values (5, 'Stephanie','Grey', '16 rosedale whitwick le675gh', '@email');\
+insert into LeadCustomer values (6, 'Josie','Red', '17 rosedale whitwick le675gh', '@email');\
+insert into LeadCustomer values (7, 'Jo','Ambi', '18 rosedale whitwick le675gh', '@email');\
+insert into LeadCustomer values (8, 'Johnny','Rotten', '1 rosedale whitwick le675gh', '@email');\
+insert into LeadCustomer values (9, 'Appleseed','John', '2 rosedale whitwick le675gh', '@email');\
+insert into LeadCustomer values (10, 'Seb','Co', '70 rosedale whitwick le675gh', '@email');\
+\
+Passenger\
+\
+insert into Passenger values (1,'Jon','G', 'a12345', 'EU', '11/12/17');\
+insert into Passenger values (2,'Jo','A', 'a12346', 'EU', '11/12/17');\
+insert into Passenger values (3,'Sam','T', 'a12347', 'EU', '11/12/17');\
+insert into Passenger values (4,'Tim','H', 'a12348', 'EU', '11/12/17');\
+insert into Passenger values (5,'Pete','D', 'a12345', 'EU', '11/12/17');\
+insert into Passenger values (6,'Lib','R', 'a12345', 'EU', '11/12/17');\
+insert into Passenger values (7,'Sammie','E', 'a12345', 'EU', '11/12/17');\
+insert into Passenger values (8,'Matt','Y', 'a12345', 'EU', '11/12/17');\
+insert into Passenger values (9,'Fran','Bloom', 'a12345', 'EU', '11/12/17');\
+insert into Passenger values (10,'Chris','Cup', 'a12345', 'EU', '11/12/17');\
+\
+FlightBooking\
+\
+insert into FlightBooking values (1, 1, 1, 10, 'R', to_date('27/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'),450.00);\
+insert into FlightBooking values (2, 2, 2, 10, 'C', to_date('27/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'),450.00);\
+insert into FlightBooking values (3, 3, 5, 10, 'R', to_date('27/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'),450.00);\
+insert into FlightBooking values (4, 4, 6, 10, 'C', to_date('27/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'),450.00);\
+insert into FlightBooking values (5, 4, 3, 10, 'R', to_date('27/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'),450.00);\
+insert into FlightBooking values (6, 4, 6, 10, 'C', to_date('27/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'),450.00);\
+insert into FlightBooking values (7, 5, 10, 10, 'R', to_date('27/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'),450.00);\
+insert into FlightBooking values (8, 6, 1, 10, 'C', to_date('27/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'),450.00);\
+insert into FlightBooking values (9, 7, 8, 10, 'R', to_date('27/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'),450.00);\
+insert into FlightBooking values (10,10, 7, 51, 'R', to_date('27/04/17 12:00:00', 'dd/mm/yy HH24:MI:SS'),450.00);\
+\
+SeatBooking\
+\
+insert into SeatBooking values (7,10,'aa01');\
+insert into SeatBooking values (7,9,'aa02');\
+insert into SeatBooking values (7,8,'aa03');\
+insert into SeatBooking values (7,7,'aa04');\
+insert into SeatBooking values (7,6,'aa05');\
+insert into SeatBooking values (7,5,'aa06');\
+insert into SeatBooking values (7,4,'aa07');\
+insert into SeatBooking values (7,3,'aa08');\
+insert into SeatBooking values (7,2,'aa09');\
+insert into SeatBooking values (7,1,'aa10');\
+\
+\
+\
+}

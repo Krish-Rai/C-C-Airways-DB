@@ -1,0 +1,86 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf820
+\cocoascreenfonts1{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww25400\viewh13600\viewkind0
+\deftab720
+\pard\pardeftab720\ri380\partightenfactor0
+
+\f0\fs28 \cf0 \
+\pard\pardeftab720\ri-621\partightenfactor0
+\cf0 CREATE TABLE LeadCustomer \
+(\
+	CustomerID INTEGER NOT NULL,\
+	FirstName VARCHAR(20)  NOT NULL,\
+	Surname VARCHAR(40)  NOT NULL,\
+	BillingAddress VARCHAR(200)  NOT NULL,\
+\pard\pardeftab720\ri-3202\partightenfactor0
+\cf0 	email  VARCHAR(30) NOT NULL,\
+	CONSTRAINT CustomerID PRIMARY KEY (CustomerID)\
+\pard\pardeftab720\ri-621\partightenfactor0
+\cf0 );\
+\
+CREATE TABLE Passenger \
+(\
+	PassengerID INTEGER NOT NULL,\
+	FirstName VARCHAR(20)  NOT NULL,\
+	Surname VARCHAR(40)  NOT NULL,\
+	PassportNo VARCHAR(30) NOT NULL,\
+	Nationality VARCHAR(30) NOT NULL,\
+	Dob DATE NOT NULL,\
+	CONSTRAINT PassengerID PRIMARY KEY (PassengerID)
+\f1 \
+
+\f0 );\
+\
+CREATE TABLE Flight \
+(\
+	FlightID INTEGER NOT NULL,\
+	FlightDate TIMESTAMP NOT NULL, \
+	Origin VARCHAR(30) NOT NULL,\
+	Destination VARCHAR(30) NOT NULL,\
+	MaxCapacity INTEGER NOT NULL,\
+	PricePerSeat DECIMAL NOT NULL,\
+\pard\pardeftab720\ri-621\partightenfactor0
+\cf0 	CONSTRAINT FlightID PRIMARY KEY (FlightID)\
+\pard\pardeftab720\ri-621\partightenfactor0
+\cf0 \
+);\
+CREATE TABLE FlightBooking \
+(\
+	BookingID INTEGER NOT NULL,\
+	CustomerID INTEGER NOT NULL,\
+	FlightID INTEGER NOT NULL, \
+	NumSeats INTEGER NOT NULL,\
+	Status CHAR(1) NOT NULL,\
+	BookingTime TIMESTAMP NOT NULL,\
+\pard\tx720\tx1440\tx2160\tx2880\tx3898\pardeftab720\ri-621\partightenfactor0
+\cf0 	TotalCost DECIMAL,\
+\pard\pardeftab720\ri-621\partightenfactor0
+\cf0 	CONSTRAINT BookingID PRIMARY KEY (BookingID),\
+  	CONSTRAINT customerid_fk FOREIGN KEY (customerid)\
+\pard\pardeftab720\ri-5223\partightenfactor0
+\cf0       	REFERENCES public.leadcustomer (customerid) MATCH SIMPLE\
+\pard\pardeftab720\ri-621\partightenfactor0
+\cf0       	ON UPDATE NO ACTION ON DELETE NO ACTION,\
+     CONSTRAINT "flightid_FK" FOREIGN KEY (flightid)\
+      	REFERENCES public.flight (flightid) MATCH SIMPLE\
+      	ON UPDATE NO ACTION ON DELETE NO ACTION\
+\
+\pard\pardeftab720\ri-621\partightenfactor0
+\cf0 	\
+);\
+CREATE TABLE SeatBooking\
+(\
+	BookingID INTEGER NOT NULL,\
+	PassengerID INTEGER NOT NULL,\
+	SeatNumber CHAR(4),\
+\pard\pardeftab720\ri-4598\partightenfactor0
+\cf0 	CONSTRAINT SeatBooking PRIMARY KEY (BookingID, PassengerID)\
+\pard\pardeftab720\ri-621\partightenfactor0
+\cf0 	\
+);\
+\
+\pard\tx6273\pardeftab720\ri-621\qj\partightenfactor0
+\cf0 \
+}
